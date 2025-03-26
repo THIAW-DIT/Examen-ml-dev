@@ -1,0 +1,4 @@
+[core]
+    remote = examen-ml
+['remote "examen-ml"']
+    url = gdrive://1m1xq41lBA2KgwFQV6DYITPYv65MLJXzf

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application ML</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Barre de navigation avec carousel -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- Titre de l'application -->
+        <a class="navbar-brand" href="#">Application ML</a>
+
+        <!-- Carousel intégré dans la navbar -->
+        <div
+          id="navbarCarousel"
+          class="carousel slide ms-auto"
+          data-bs-ride="carousel"
+          style="width: 60%"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="{{ url_for('static', filename='image1.webp') }}"
+                class="d-block w-100"
+                alt="Image 1"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Bienvenue sur l'application ML</h5>
+                <p>Explorez les fonctionnalités de Machine Learning.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{{ url_for('static', filename='image2.jpg') }}"
+                class="d-block w-100"
+                alt="Image 2"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Téléchargez vos données</h5>
+                <p>Utilisez des fichiers CSV pour entraîner vos modèles.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{{ url_for('static', filename='image3.jpg') }}"
+                class="d-block w-100"
+                alt="Image 3"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Visualisez les résultats</h5>
+                <p>Obtenez des graphiques et des métriques précises.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container mt-5">
+      <h1 class="text-center mb-4 text-primary">
+        Application de Machine Learning
+      </h1>
+
+      <!-- Formulaire de téléchargement de fichier -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Télécharger un fichier CSV</h5>
+          <form
+            action="{{ url_for('upload_file') }}"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="mb-3">
+              <label for="file" class="form-label"
+                >Sélectionnez un fichier CSV :</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                name="file"
+                id="file"
+                accept=".csv"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Télécharger</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Formulaire de sélection du modèle -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Entraîner un modèle</h5>
+          <form action="{{ url_for('train_model') }}" method="post">
+            <div class="mb-3">
+              <label for="filename" class="form-label"
+                >Fichier sélectionné :</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="filename"
+                id="filename"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="model" class="form-label"
+                >Sélectionnez un modèle :</label
+              >
+              <select class="form-select" name="model" id="model" required>
+                <option value="linear_regression">Régression Linéaire</option>
+                <option value="random_forest">Random Forest</option>
+                <option value="svm">SVM</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-success">
+              Entraîner le modèle
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Affichage des résultats -->
+      {% if result %}
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Résultats de l'entraînement</h5>
+          <p class="card-text">{{ result }}</p>
+          <img
+            src="{{ url_for('static', filename='plot.png') }}"
+            class="img-fluid"
+            alt="Graphique des résultats"
+          />
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Affichage des messages flash -->
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <div class="alert alert-info">
+        <ul class="mb-0">
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %} {% endwith %}
+    </div>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <!-- Colonne 1 : À propos -->
+          <div class="col-md-4">
+            <h5>À propos</h5>
+            <p class="text-muted">
+              Cette application permet de télécharger des données, d'entraîner
+              des modèles de Machine Learning et de visualiser les résultats.
+            </p>
+          </div>
+
+          <!-- Colonne 2 : Liens rapides -->
+          <div class="col-md-4">
+            <h5>Liens rapides</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none">Accueil</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Télécharger des données</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Entraîner un modèle</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Résultats</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Colonne 3 : Contact -->
+          <div class="col-md-4">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-envelope"></i> Email : contact@mlapp.com</li>
+              <li><i class="fas fa-phone"></i> Téléphone : +2213458856</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Adresse : PE Rue de la
+                paix, Dakar
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ligne de copyright -->
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p class="text-muted mb-0">
+              &copy; 2025 Application ML. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome (pour les icônes) -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS (nécessaire pour le carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

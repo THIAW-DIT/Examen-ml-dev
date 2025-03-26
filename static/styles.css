@@ -1,0 +1,74 @@
+/* Ajouter une marge supplémentaire au titre */
+h1 {
+  margin-bottom: 2rem;
+}
+
+/* Personnaliser les cartes */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Personnaliser les boutons */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* Personnaliser les alertes */
+.alert-info {
+  background-color: #c7e9ee;
+  border-color: #abd0d7;
+  color: #12616f;
+}
+/* Personnaliser la navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+/* Personnaliser le carousel dans la navbar */
+#navbarCarousel {
+  height: 100px; /* Ajustez la hauteur du carousel */
+  overflow: hidden;
+}
+
+#navbarCarousel .carousel-item img {
+  height: 100px; /* Ajustez la hauteur des images */
+  object-fit: cover; /* Assure que l'image couvre tout l'espace */
+}
+
+#navbarCarousel .carousel-caption {
+  background: rgba(42, 108, 232, 0.5); /* Fond semi-transparent */
+  padding: 0.5rem;
+  border-radius: 5px;
+  bottom: 10px; /* Ajustez la position du texte */
+}
+
+#navbarCarousel .carousel-control-prev-icon,
+#navbarCarousel .carousel-control-next-icon {
+  background-color: rgba(34, 54, 233, 0.5); /* Couleur des flèches */
+  border-radius: 50%;
+}
+
+/* Personnaliser le footer */
+.footer {
+  border-top: 1px solid #444; /* Ajoute une bordure en haut */
+}
+
+.footer a {
+  color: #fff; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement */
+}
+
+.footer a:hover {
+  color: #007bff; /* Couleur des liens au survol */
+}
+
+.footer .text-muted {
+  color: #aaa !important; /* Couleur du texte secondaire */
+}
