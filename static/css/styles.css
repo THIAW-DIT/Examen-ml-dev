@@ -1,74 +1,55 @@
-/* Ajouter une marge supplémentaire au titre */
-h1 {
-  margin-bottom: 2rem;
+body {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Personnaliser les cartes */
+.main-content {
+  flex: 1;
+}
+
 .card {
+  margin-bottom: 20px;
+  border-radius: 10px;
   border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-/* Personnaliser les boutons */
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+.card-header {
+  font-weight: bold;
+  border-radius: 10px 10px 0 0 !important;
 }
 
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
-}
-
-/* Personnaliser les alertes */
-.alert-info {
-  background-color: #c7e9ee;
-  border-color: #abd0d7;
-  color: #12616f;
-}
-/* Personnaliser la navbar */
-.navbar {
-  padding: 0.5rem 1rem;
-}
-
-/* Personnaliser le carousel dans la navbar */
-#navbarCarousel {
-  height: 100px; /* Ajustez la hauteur du carousel */
-  overflow: hidden;
-}
-
-#navbarCarousel .carousel-item img {
-  height: 100px; /* Ajustez la hauteur des images */
-  object-fit: cover; /* Assure que l'image couvre tout l'espace */
-}
-
-#navbarCarousel .carousel-caption {
-  background: rgba(42, 108, 232, 0.5); /* Fond semi-transparent */
-  padding: 0.5rem;
+.img-fluid {
+  border: 1px solid #dee2e6;
   border-radius: 5px;
-  bottom: 10px; /* Ajustez la position du texte */
+  margin-bottom: 15px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-#navbarCarousel .carousel-control-prev-icon,
-#navbarCarousel .carousel-control-next-icon {
-  background-color: rgba(34, 54, 233, 0.5); /* Couleur des flèches */
-  border-radius: 50%;
+.table {
+  margin-top: 15px;
 }
 
-/* Personnaliser le footer */
-.footer {
-  border-top: 1px solid #444; /* Ajoute une bordure en haut */
+.btn {
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-weight: 500;
 }
 
-.footer a {
-  color: #fff; /* Couleur des liens */
-  text-decoration: none; /* Supprime le soulignement */
+.alert {
+  border-radius: 8px;
 }
 
-.footer a:hover {
-  color: #007bff; /* Couleur des liens au survol */
+.navbar {
+  padding: 1rem 0;
 }
 
-.footer .text-muted {
-  color: #aaa !important; /* Couleur du texte secondaire */
+.navbar-brand i {
+  color: #4ca1af;
+}
+
+.app-footer {
+  background: linear-gradient(135deg, #2c3e50, #1a252f);
 }
