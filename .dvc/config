@@ -1,6 +1,0 @@
-[core]
-    remote = examen-ml
-['remote "examen-ml"']
-    url = gdrive://1m1xq41lBA2KgwFQV6DYITPYv65MLJXzf
-    gdrive_use_service_account = true
-    gdrive_service_account_json_file_path = ../key_json.json
