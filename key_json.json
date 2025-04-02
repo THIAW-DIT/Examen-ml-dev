@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "examen-ml-dev",
+  "private_key_id": "f5558d2ed2c40abad4f67b5f06fba447eb24d291",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC28LEibcnVv5d9\nFXfPtBdNfufjgPbxl3CO7RFeZLhxzd/pbgOgsWYuRl21Zcgj//fYk2XAy6zG8Wiq\n8uHwuZ1ubyN88wLhnN4Gmtom0NlWpXQMk75OuMey/vJuTeqrm9KzygCAdmm/RLFM\n2WXG8l3C/CpNRlkbTPw8QUB9XJ8UVYEw+Ev9JnBVLveg9UbQePfLnmKOC9eyQUvY\n95zlh4UGFiERwOGQVIhresX1MKzYe/5EMC/aFXIMKjUWIXXv4HXgkGpHqXWGGZ/D\nPjkrVyMhGSEpNDaY6I96zUQATzz3VCd4ZzDVxv0NC9mKsfDqOUveE9kNNXzRXK30\nIx8kgvsxAgMBAAECggEAAIEr7PIwW5vaFi3SWV0dNgkYa424ObCqhgzUsM2A98aE\n9ivMGLiFPGPUeB65SpK8nyhpF85+9tPbU4FhV1RZ/lqSE9BB8zCdjUlqiDqSPSbV\nSHp3lPlDoSJYlC57DXVhdYEZJoRW1VQcrNF6r3520GSU688qA/ihikEXu6ORN6C5\nBvF3Yym4uq0nIBBNaZ27+8vvbZtPsWpv2IK0733NGqchv0gPZukKg3d1TuxqDJqN\nWEj3UiiodaKIt32z7bWFrZ/w4aa1k8ITMf2N34BtfHM3d5TCM4e/FTtWth+6ZcQU\nJy3uWm5OtklAUmGssbsJisIsjhPtmwRrnym8vP8jkwKBgQDrIxToHi0RZ2jC3aQ4\n+0odHq/zhchwsTs6Lz4KjyyyEK5HEsk9WqUjt3EdlIUYjt63q09jkmfpLyyXtwm6\nSzKeeyU5FkCAP+8xFNQSMCCL9ucMP2JgzC848x1o5Se9Fc/+JfrZaJ4stkd0H45S\n6yXKaYDVjzcXJWyceahEArZYSwKBgQDHLAIEff4Mn63Ll+KfDPpX0Ito8D+XW5oY\ncvizhd0bCUSt+BjwsoxnN4qTq8j1Zbvj2GJDpt9dxs1Fxo+cdPdeQPtkocelRaxU\nis80yZaqXWKwjf+1jlxKhdu3ahZZ5bTMMWRaHZ9j9OoFFJGy+VRjugCixRNhh/Dj\nLb22eKQE8wKBgHElgHnxi15ElHSwksWYpiE9Ew3r4nfX0Ng+w2vxWWCWBkbNE2ki\npTR6oUPKpAEdPq7DEICpgrcCrEKVIWkzpjf8qfy+aGtOWJsVmrbl0cOIG8YY+g36\nMv8EfbJsEqM6S8vQGtVjMjnxvJB0XtgnrxenjQc20xugNpNVN1MCuxvhAoGBAKbM\ntz/V2D3wOFeJ8tNqxflnAGm40jjLESkqmBeYowwyXd8oKJLjpOwIOrjjI+BH++ub\n2ud3SBc8F8s4uCq6VjQMTb0AM7e4utLukQtPTCuPG8hqk10URTxwEAryAJf25Mwh\nDT7fEg5fHOF2UXLGliMSsdefHlUOyPEo7Hl1XT97AoGBAKQt+TSk7M5CEH869U/r\nnZjp9Qcv1h9hqabWgRxt+vNsaKigzaqXwzp0TegaqKpNGHJm+bZ9uRNepAHL74wD\nT3e22JuXMsVeg+72wQpthqMTiv9Pbf3gF/tvg8Y+2fLV11gqibkXF66fOyay1mfD\nOAFDlALzazyzC8JbhgVEav4l\n-----END PRIVATE KEY-----\n",
+  "client_email": "examen-ml-dev-service@examen-ml-dev.iam.gserviceaccount.com",
+  "client_id": "110398617636680555124",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/examen-ml-dev-service%40examen-ml-dev.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
