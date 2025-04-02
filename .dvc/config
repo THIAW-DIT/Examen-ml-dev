@@ -3,4 +3,4 @@
 ['remote "examen-ml"']
     url = gdrive://1m1xq41lBA2KgwFQV6DYITPYv65MLJXzf
     gdrive_use_service_account = true
-    gdrive_service_account_json_file_path = ../examen-ml-dev-f5558d2ed2c4.json
+    gdrive_service_account_json_file_path = ../examen-ml-dev-f5558d2ed2c4
